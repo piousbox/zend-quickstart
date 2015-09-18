@@ -11,6 +11,11 @@
         <controllerFile controllerName="Index">
           <actionMethod actionName="index"/>
         </controllerFile>
+        
+        <controllerFile controllerName="Guestbook">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+
         <controllerFile controllerName="Error"/>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
@@ -32,6 +37,11 @@
           <viewControllerScriptsDirectory forControllerName="Index">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
+          
+          <viewControllerScriptsDirectory forControllerName="Guestbook">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
           </viewControllerScriptsDirectory>
