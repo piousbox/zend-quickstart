@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<projectProfile type="default" version="1.10">
+<projectProfile type="default" version="1.11.11">
   <projectDirectory>
-    <projectProfileFile/>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
     <applicationDirectory classNamePrefix="Application_">
       <apisDirectory enabled="false"/>
       <configsDirectory>
@@ -11,23 +11,25 @@
         <controllerFile controllerName="Index">
           <actionMethod actionName="index"/>
         </controllerFile>
-        <controllerFile controllerName="Error"/>
         <controllerFile controllerName="Guestbook">
           <actionMethod actionName="index"/>
-          <actionMethod actionName="sign"/>
         </controllerFile>
+        <controllerFile controllerName="Error"/>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Guestbook"/>
       </formsDirectory>
-      <layoutsDirectory enabled="false"/>
+      <layoutsDirectory>
+        <layoutScriptsDirectory>
+          <layoutScriptFile layoutName="layout"/>
+        </layoutScriptsDirectory>
+      </layoutsDirectory>
       <modelsDirectory>
         <dbTableDirectory>
           <dbTableFile dbTableName="Guestbook"/>
         </dbTableDirectory>
-        <modelFile modelName="Guestbook"/>
         <modelFile modelName="GuestbookMapper"/>
-        <modelFile modelName="User"/>
+        <modelFile modelName="Guestbook"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
@@ -35,20 +37,17 @@
           <viewControllerScriptsDirectory forControllerName="Index">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Error">
-            <viewScriptFile forActionName="error"/>
-          </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Guestbook">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Guestbook">
-            <viewScriptFile forActionName="sign"/>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
       </viewsDirectory>
-      <bootstrapFile/>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
     </applicationDirectory>
     <dataDirectory enabled="false">
       <cacheDirectory enabled="false"/>
@@ -58,6 +57,9 @@
       <sessionsDirectory enabled="false"/>
       <uploadsDirectory enabled="false"/>
     </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
     <libraryDirectory>
       <zfStandardLibraryDirectory enabled="false"/>
     </libraryDirectory>
@@ -65,22 +67,22 @@
       <publicStylesheetsDirectory enabled="false"/>
       <publicScriptsDirectory enabled="false"/>
       <publicImagesDirectory enabled="false"/>
-      <publicIndexFile/>
-      <htaccessFile/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
     </publicDirectory>
     <projectProvidersDirectory enabled="false"/>
     <temporaryDirectory enabled="false"/>
     <testsDirectory>
-      <testPHPUnitConfigFile/>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
       <testApplicationDirectory>
-        <testApplicationBootstrapFile/>
         <testApplicationControllerDirectory>
-          <testApplicationControllerFile/>
+          <testApplicationControllerFile forControllerName="Index">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
-      <testLibraryDirectory>
-        <testLibraryBootstrapFile/>
-      </testLibraryDirectory>
+      <testLibraryDirectory/>
     </testsDirectory>
   </projectDirectory>
 </projectProfile>
